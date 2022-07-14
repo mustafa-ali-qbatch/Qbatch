@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 ALI
-=======
 Afatsum
->>>>>>> dev
