@@ -12,7 +12,7 @@ def printArray(arr):
 def swapBytes(x):
 	# 0x AA BB CC DD -> DD CC BB AA
 	# 1 byte is shift of 8
-	y1 = (x << 24) & 0xFF000000
+	y1 = (x << 24) & 0xFF00000aa
 	y2 = (x << 8) & 0x00FF0000
 	y3 = (x >> 8) & 0x0000FF00
 	y4 = (x >> 24) & 0x000000FF
