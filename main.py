@@ -1,3 +1,5 @@
+# Added comments
+
 def swapBytes(x):
 	# 0x AA BB CC DD -> DD CC BB AA
 	# 1 byte is shift of 8
