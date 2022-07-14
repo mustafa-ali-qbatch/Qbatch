@@ -1,5 +1,12 @@
-# Added comments
+# This function takes array and pushes it
+def printArray(arr):
+	for i in arr:
+		print(i)
+	return
 
+# This function replaces byte order
+# essentially switching between
+# little and big endian order
 def swapBytes(x):
 	# 0x AA BB CC DD -> DD CC BB AA
 	# 1 byte is shift of 8
