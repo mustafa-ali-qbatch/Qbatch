@@ -1,3 +1,5 @@
+import random
+
 # This function takes array and pushes it
 def printArray(arr):
 	for i in arr:
@@ -22,6 +24,13 @@ def main():
 	print("%.8x" % x)
 	x = swapBytes(x)
 	print("%.8x" % x)
+	
+	l = 10
+	arr = [None] * l
+	for i in range(l):
+		arr[i] = random.randint(0, 32767)
+
+	printArray(arr)
 	return
 
 if __name__ == "__main__":
