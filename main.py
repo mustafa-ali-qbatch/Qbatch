@@ -3,7 +3,7 @@ import random
 # This function takes array and pushes it
 def printArray(arr):
 	for i in arr:
-		print(i)
+		print(i, end=' ')
 	return
 
 # This function replaces byte order
