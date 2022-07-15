@@ -6,9 +6,8 @@ def printArray(arr):
 		print(i, end=' ')
 	return
 
-# This function replaces byte order
-# essentially switching between
-# little and big endian order
+# added python andom code to test git and github 
+
 def swapBytes(x):
 	# 0x AA BB CC DD -> DD CC BB AA
 	# 1 byte is shift of 8
