@@ -21,11 +21,13 @@ jobs:
 
   checkout:
     runs-on: self-hosted
+    needs: build
     steps:
       - uses: actions/checkout@v3
 
   build-release:
     runs-on: self-hosted
+    needs: checkout
     steps:
         - name: pull branch
           run: git pull origin master
