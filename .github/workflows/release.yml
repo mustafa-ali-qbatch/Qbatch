@@ -13,7 +13,7 @@ jobs:
         with:
           host: 46.101.148.197
           username: root
-          key: ${{ secrets.REMOTE_SECRET  }}
+          key: ${{ secrets.REMOTE_SECRET }}
           script: |
             whoami
             ls -la
