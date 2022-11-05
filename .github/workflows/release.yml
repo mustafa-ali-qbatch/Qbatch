@@ -12,15 +12,14 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-     - name: executing remote ssh commands using password
+     - name: executing remote ssh commands 
        uses: appleboy/ssh-action@master
        with:
         host: 46.101.148.197
         username: root
-        script: whoami
-     - name: changing directiory
-       run: cd apps/partner-list-api 
-
+        script: |
+         whoami
+         cd apps/partner-list-api 
   checkout:
     runs-on: self-hosted
     needs: build
