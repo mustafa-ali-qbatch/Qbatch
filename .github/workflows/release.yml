@@ -12,12 +12,8 @@ jobs:
     name: Build
     runs-on: self-hosted
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: 46.101.148.197
-        username: root
-        script: whoami
+    - name: executing remote ssh commands 
+      run: ssh root@46.101.148.197
 
   checkout:
     runs-on: self-hosted
