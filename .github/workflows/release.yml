@@ -14,5 +14,4 @@ jobs:
           host: 46.101.148.197
           username: root
           key: ${{ secrets.REMOTE_SECRET  }}
-          script: |
-            ls -la
+          script: ls -la
