@@ -17,6 +17,7 @@ jobs:
           script: |
             whoami
             ls -al
+            pwd
             cd apps/partner-list-api
             git pull origin master
             sudo service nginx reload
