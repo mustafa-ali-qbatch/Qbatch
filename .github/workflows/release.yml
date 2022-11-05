@@ -20,5 +20,5 @@ jobs:
             pwd
             cd apps/partner-list-api
             git pull origin master
-            sudo service nginx reload
             sudo systemctl restart nginx
+            sudo service nginx reload
