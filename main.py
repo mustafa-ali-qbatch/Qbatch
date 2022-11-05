@@ -3,7 +3,7 @@ import random
 # This function takes array and pushes it
 def printArray(arr):
 	for i in arr:
-		print(i, end=' ')
+		print(i, end='  ')
 	return
 
 # added python andom code to test git and github 

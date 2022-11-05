@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ALI
 Afatsum
-=======
 Afatsum
 sheikh
->>>>>>> f2421100be8e6204c51140af336cfc47e83c3d49
