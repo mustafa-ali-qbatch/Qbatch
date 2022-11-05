@@ -11,7 +11,8 @@ jobs:
 
   build:
     name: Build
-   
+    env:
+      REMOTE_SECRET: ${{ secrets.REMOTE_SECRET  }}
 
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +21,7 @@ jobs:
        with:
         host: 46.101.148.197
         username: root
-        key: ${{ secrets.REMOTE_SECRET }}
+        key: $REMOTE_SECRET
         script: |
          whoami
          cd apps/partner-list-api 
