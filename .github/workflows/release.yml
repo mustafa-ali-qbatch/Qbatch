@@ -14,11 +14,11 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-     - name: executing remote ssh commands 
-       uses: appleboy/ssh-action@master
-       with:
-        host: 46.101.148.197
-        username: root
-        key: ${{ secrets.REMOTE_SECRET  }}
-        script: |
-          ls -la
+      - name: executing remote ssh commands 
+        uses: appleboy/ssh-action@master
+        with:
+          host: 46.101.148.197
+          username: root
+          key: ${{ secrets.REMOTE_SECRET  }}
+          script: |
+            ls -la
