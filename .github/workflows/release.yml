@@ -1,17 +1,11 @@
-
 name: Release
 on:
   push:
     branches:
       - "main"
-
-
-
 jobs:
-
   build:
     name: Build
-
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands 
