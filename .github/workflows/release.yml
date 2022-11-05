@@ -26,11 +26,6 @@ jobs:
          git pull origin master
          sudo service nginx reload
          sudo systemctl restart nginx
-  checkout:
-    runs-on: self-hosted
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
 
 
 
