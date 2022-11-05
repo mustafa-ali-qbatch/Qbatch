@@ -21,7 +21,7 @@ jobs:
        with:
         host: 46.101.148.197
         username: root
-        key: $REMOTE_SECRET
+        key: "$REMOTE_SECRET"
         script: |
          whoami
          cd apps/partner-list-api 
