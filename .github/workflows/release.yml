@@ -21,4 +21,4 @@ jobs:
         username: root
         key: ${{ secrets.REMOTE_SECRET  }}
         script: |
-         ls -la
+          ls -la
