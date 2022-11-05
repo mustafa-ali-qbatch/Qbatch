@@ -21,17 +21,4 @@ jobs:
         username: root
         key: ${{ secrets.REMOTE_SECRET  }}
         script: |
-         whoami
-         cd apps/partner-list-api 
-         git pull origin master
-         sudo service nginx reload
-         sudo systemctl restart nginx
-
-
-
-
-
-
-
-
-
+         ls -la
