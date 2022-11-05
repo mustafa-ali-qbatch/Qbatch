@@ -16,4 +16,4 @@ jobs:
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
             whoami
-            ls -la
+            ls -al
