@@ -14,4 +14,9 @@ jobs:
           host: 46.101.148.197
           username: root
           key: ${{ secrets.REMOTE_SECRET  }}
-          script: ls -la
+          script: |
+            whoami
+            cd apps/partner-list-api 
+            git pull origin master
+            sudo service nginx reload
+            sudo systemctl restart nginx
