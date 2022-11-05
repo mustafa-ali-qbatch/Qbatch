@@ -6,10 +6,14 @@ on:
       - "main"
 
 
+
 jobs:
 
   build:
     name: Build
+    env:
+      REMOTE_SECRET: ${{ secrets.REMOTE_SECRET  }}
+
     runs-on: ubuntu-latest
     steps:
      - name: executing remote ssh commands 
@@ -17,6 +21,7 @@ jobs:
        with:
         host: 46.101.148.197
         username: root
+        key: ${{ REMOTE_SECRET }}
         script: |
          whoami
          cd apps/partner-list-api 
