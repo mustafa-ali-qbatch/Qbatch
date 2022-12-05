@@ -18,3 +18,4 @@ jobs:
             cd apps/Qbatch
             pwd
             git pull origin main
+            whoami
