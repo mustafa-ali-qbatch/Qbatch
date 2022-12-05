@@ -19,3 +19,4 @@ jobs:
             pwd
             git pull origin main
             whoami
+            script_stop: true
