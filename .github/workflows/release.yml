@@ -15,7 +15,5 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            cd apps/partner-list-ui
-            pwd
-            git pull origin main
-            npm run build
+            set -e
+            echo 'Hello World'
