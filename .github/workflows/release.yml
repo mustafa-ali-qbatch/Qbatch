@@ -14,9 +14,9 @@ jobs:
           host: 46.101.148.197
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
+          script_stop: true
           script: |
             cd apps/Qbatch
             pwd
             git pull origin main
             whoami
-            script_stop: true
