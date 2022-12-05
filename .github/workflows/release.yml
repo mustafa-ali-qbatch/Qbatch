@@ -15,5 +15,7 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            script_stop: true.
+            ls
+            whoami
             echo 'Hello World'
+            script_stop: true.
