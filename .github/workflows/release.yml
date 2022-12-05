@@ -15,7 +15,7 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            ls
-            whoami
-            echo 'Hello World'
+            cd apps/Qbatch
+            pwd
+            git pull origin main
             script_stop: true.
