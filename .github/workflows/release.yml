@@ -1,9 +1,9 @@
-run-name: Deploy to ${{ github.event.inputs.name }} by @${{ github.actor }}
+run-name: ${{ github.event.inputs.name }}
 on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Enter Commit Message"
+        description: "Enter Workflow title"
         default: "message"
         required: true
 jobs:
