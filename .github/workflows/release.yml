@@ -4,7 +4,6 @@ on:
     inputs:
       name:
         description: "Enter Workflow title"
-        default: "message"
         required: true
 jobs:
   title:
