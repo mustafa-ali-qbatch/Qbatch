@@ -5,9 +5,9 @@ on:
       - "main"
   workflow_dispatch:
     inputs:
-      name:
-        type: string
+      message:
         description: commit message
+        required: true
 
 jobs:
   deploy:
