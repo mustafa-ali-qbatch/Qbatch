@@ -1,4 +1,4 @@
-name: manual-input-workflow
+name: Input-workflow
 on:
   push:
     branches:
