@@ -1,17 +1,14 @@
 name: Input-workflow
 on:
-  push:
-    branches:
-      - "main"
   workflow_dispatch:
     inputs:
       name:
-        description: "Person to greet"
-        default: "World"
+        description: "Enter Commit Message"
+        default: "message"
         required: true
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Send greeting
-        run: echo "Hello ${{ github.event.inputs.name }}"
+      - name: Show Commit Message
+        run: echo "Commit Message is  ${{ github.event.inputs.name }}"
