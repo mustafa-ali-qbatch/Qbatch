@@ -6,10 +6,11 @@ on:
       name:
         description: "Enter Workflow title"
         required: true
-
 jobs:
   title:
     runs-on: ubuntu-latest
     steps:
       - name: Show Title
-        run: echo ${{ github.event.inputs.name }}
+        run: |
+          [[ "${{ github.event.inputs.name }}" ]] || { echo "title is empty" ; exit 1; }
+          echo ${{ github.event.inputs.name }}
