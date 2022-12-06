@@ -1,3 +1,4 @@
+name: Test File
 run-name: ${{ github.event.inputs.name }}
 on:
   workflow_dispatch:
@@ -5,6 +6,7 @@ on:
       name:
         description: "Enter Workflow title"
         required: true
+
 jobs:
   title:
     runs-on: ubuntu-latest
