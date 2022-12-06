@@ -5,15 +5,12 @@ on:
       - "main"
   workflow_dispatch:
     inputs:
-      name:
-        type: choice
-        options:
-          - monalisa
-          - cschleiden
-        description: Who to greet
-      use-emoji:
-        type: boolean
-        description: Include  emojis
+      logLevel:
+        description: "Log level"
+        required: true
+        default: "warning"
+      tags:
+        description: "Test scenario tags"
 jobs:
   printInputs:
     runs-on: ubuntu-latest
