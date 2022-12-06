@@ -7,8 +7,8 @@ on:
         default: "message"
         required: true
 jobs:
-  message:
+  title:
     runs-on: ubuntu-latest
     steps:
       - name: Show Title
-        run: echo  ${{ github.event.inputs.name }}"
+        run: echo ${{ github.event.inputs.name }}
