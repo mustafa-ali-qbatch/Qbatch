@@ -10,5 +10,5 @@ jobs:
   message:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Commit Message
-        run: echo "Commit Message':'  ${{ github.event.inputs.name }}"
+      - name: Show Title
+        run: echo Title is  ${{ github.event.inputs.name }}"
