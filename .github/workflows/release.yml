@@ -12,7 +12,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ inputs.perform_deploy }}
     steps:
       - name: Deploy build to target
         run: deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
