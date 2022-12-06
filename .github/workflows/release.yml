@@ -1,17 +1,14 @@
-name: Release
+name: 020-manual-input-workflow
 on:
-  push:
-    branches:
-      - "main"
   workflow_dispatch:
     inputs:
-      message:
-        description: commit message
+      name:
+        description: "Person to greet"
+        default: "World"
         required: true
-
 jobs:
-  deploy:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy build to target
-        run: echo hello world
+      - name: Send greeting
+        run: echo "Hello ${{ github.event.inputs.name }}"
