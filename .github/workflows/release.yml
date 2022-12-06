@@ -7,8 +7,8 @@ on:
         default: "message"
         required: true
 jobs:
-  greet:
+  message:
     runs-on: ubuntu-latest
     steps:
       - name: Show Commit Message
-        run: echo "Commit Message is  ${{ github.event.inputs.name }}"
+        run: echo "Commit Message is ${{ github.event.inputs.name }}"
