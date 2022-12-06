@@ -3,15 +3,22 @@ on:
   push:
     branches:
       - "main"
-  workflow_dispatch:
+  workflow_call:
     inputs:
-      input:
-        description: "Test"
+      build_id:
         required: true
-        default: "World"
+        type: number
+      deploy_target:
+        required: true
+        type: string
+      perform_deploy:
+        required: true
+        type: boolean
 
 jobs:
-  job1:
+  deploy:
     runs-on: ubuntu-latest
+    if: ${{ inputs.perform_deploy }}
     steps:
-      - run: echo Hello ${{ github.event.inputs.input }}
+      - name: Deploy build to target
+        run: deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
