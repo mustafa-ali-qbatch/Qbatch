@@ -1,4 +1,4 @@
-name: Input-workflow
+run-name: Deploy to ${{ github.event.inputs.name }} by @${{ github.actor }}
 on:
   workflow_dispatch:
     inputs:
