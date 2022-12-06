@@ -15,6 +15,9 @@ on:
         type: boolean
         description: Include  emojis
 jobs:
-  build:
-    name: Build
+  printInputs:
     runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Log level: ${{ github.event.inputs.logLevel }}"
+          echo "Tags: ${{ github.event.inputs.tags }}"
