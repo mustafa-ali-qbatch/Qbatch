@@ -13,10 +13,9 @@ jobs:
       - name: Show Title
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
+          host: 46.101.148.197
+          username: root
+          key: ${{ secrets.REMOTE_SECRET }}
           script: |
             whoami
             pwd
