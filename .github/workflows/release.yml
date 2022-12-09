@@ -11,6 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Title
-        run: |
-          [[ "${{ github.event.inputs.name }}" ]] || { echo "title is empty" ; exit 1; }
-          echo ${{ github.event.inputs.name }}
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            pwd
+            echo "Node version is $(node -v)"
+            ./node_modules/.bin/sequelize db:migrate
