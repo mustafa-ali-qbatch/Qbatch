@@ -19,5 +19,4 @@ jobs:
           script: |
             whoami
             pwd
-            echo "Node version is $(node -v)"
-            ./node_modules/.bin/sequelize db:migrate
+            npx sequelize-cli db:migrate
