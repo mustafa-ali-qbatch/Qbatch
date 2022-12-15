@@ -17,6 +17,6 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            echo "Node version is $(node -v)"
+            echo node -v
             whoami
             pwd
