@@ -17,10 +17,8 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-            command -v nvm
             nvm install 16.15.0
             whoami
             pwd
-            nvm ls-remote
+            nvm ls
             node -v
