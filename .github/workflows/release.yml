@@ -16,8 +16,9 @@ jobs:
           host: 46.101.148.197
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
-          script_stop: true
           script: |
+            npm install -g npm
             node -v
             whoami
             pwd
+            npm -v
