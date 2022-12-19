@@ -29,5 +29,6 @@ jobs:
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
             whoami
+            ~/ .nvm/versions/node/ -v
             pwd
             nvm ls
