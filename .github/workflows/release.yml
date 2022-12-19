@@ -7,6 +7,15 @@ on:
         description: "Enter Workflow title"
         required: true
 jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.3.0
+        with:
+          node-version: "16"
+      - run: npm install -g bats
+      - run: bats -v
   title:
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +26,7 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            sudo apt-get install -y nodejs
+            node -v
             whoami
             pwd
             nvm ls
