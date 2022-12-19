@@ -7,7 +7,7 @@ on:
         description: "Enter Workflow title"
         required: true
 jobs:
-  check-bats-version:
+  check-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,6 +16,8 @@ jobs:
           node-version: "16"
       - run: npm install -g bats
       - run: bats -v
+      - run: node -v
+      - run: npm -v
   title:
     runs-on: ubuntu-latest
     steps:
@@ -26,8 +28,6 @@ jobs:
           username: root
           key: ${{ secrets.REMOTE_SECRET }}
           script: |
-            node -v
             whoami
             pwd
             nvm ls
-            node -v
