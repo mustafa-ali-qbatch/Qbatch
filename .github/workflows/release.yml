@@ -13,6 +13,11 @@ jobs:
         with:
           node-version: 12
           cache: npm
-      - run: npm install
-      - run: make lint
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          prettier: true
 
