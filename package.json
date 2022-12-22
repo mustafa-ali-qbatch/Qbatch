@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "hey",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "husky": "^8.0.2"
+  },
   "devDependencies": {
     "eslint": "^8.30.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "prettier": "2.8.1"
+    "prettier": "2.8.1",
+    "expect": "^1.20.2",
+    "husky": "^0.12.0",
+    "mocha": "^3.2.0"
   },
   "scripts": {
-    "test": "chitte"
+    "test": "mocha",
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "repository": {
     "type": "git",
