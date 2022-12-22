@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.3.0
+        uses: actions/setup-node@v1
         with:
-          node-version-file: 14.9.0
+          node-version: 12
           cache: npm
       - run: npm install
       - run: make lint
