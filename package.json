@@ -17,8 +17,10 @@
   },
   "scripts": {
     "test": "mocha",
-    "precommit": "npm test",
-    "prepush": "npm test"
+    "lint": "standard",
+    "validate": "npm-run-all --parallel test lint",
+    "precommit": "npm run validate",
+    "prepush": "npm run validate"
   },
   "repository": {
     "type": "git",
