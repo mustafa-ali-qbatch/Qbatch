@@ -1,10 +1,27 @@
 {
-    "scripts": {
-        "lint:js": "eslint src/**/*.js",
-        "lint": "npm run lint:js"
-    },
-    "devDependencies": {
-        "eslint": "8.30.0",
-        "prettier": "2.8.1"
-    }
+  "name": "8154",
+  "version": "1.0.0",
+  "description": "hey",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "8.30.0",
+    "prettier": "2.8.1"
+  },
+  "scripts": {
+    "test": "chitte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafa-ali-qbatch/Qbatch.git"
+  },
+  "keywords": [
+    "hey"
+  ],
+  "author": "mustafa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafa-ali-qbatch/Qbatch/issues"
+  },
+  "homepage": "https://github.com/mustafa-ali-qbatch/Qbatch#readme"
 }
