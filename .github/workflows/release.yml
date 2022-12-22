@@ -3,27 +3,16 @@ name: Lint
 on: push
 
 jobs:
-  run-linters:
-    name: Run linters
-    runs-on: ubuntu-latest
+  lint:
+    runs-on: self-hosted
 
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.3.0
         with:
-          node-version: 12
+          node-version-file: 16
+          cache: npm
+      - run: npm install
+      - run: make lint
 
-      # ESLint and Prettier must be in `package.json`
-      - name: Install Node.js dependencies
-        run: npm install
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          # Enable linters
-          eslint: true
-          prettier: true
