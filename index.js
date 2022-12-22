@@ -12,7 +12,6 @@
 /* eslint-disable import/newline-after-import */
 /* eslint-disable quotes */
 /* eslint-disable import/no-unresolved */
-/* eslint-disable implicit-arrow-linebreak */
 import { sortBy, map, orderBy, sumBy, omit, omitBy } from "lodash";
 import moment from "moment";
 export const getMonths = (apiData) => {
