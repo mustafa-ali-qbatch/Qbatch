@@ -1,1 +1,2 @@
-console.log("hello  1");
+const abc ;
+console.log("hello 1");
