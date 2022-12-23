@@ -4,7 +4,10 @@
   "description": "hey",
   "main": "index.js",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
     "eslint": "^8.30.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "expect": "^1.20.2",
@@ -15,10 +18,11 @@
   },
   "scripts": {
     "test": "mocha",
-    "lint": "standard",
+    "lint": "eslint */*.js",
+    "lint-fix": "eslint --fix  */*.js",
     "validate": "npm-run-all --parallel test lint",
-    "precommit": "npm run validate",
-    "prepush": "npm run validate",
+    "precommit": "npm run lint-fix",
+    "prepush": "npm run lint",
     "prepare": "husky install"
   },
   "repository": {
