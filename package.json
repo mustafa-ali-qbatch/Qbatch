@@ -18,8 +18,10 @@
     "lint": "standard",
     "validate": "npm-run-all --parallel test lint",
     "precommit": "npm run validate",
-    "prepush": "npm run validate"
+    "prepush": "npm run validate",
+    "prepare": "husky install"
   },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mustafa-ali-qbatch/Qbatch.git"
