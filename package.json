@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "hey",
   "main": "index.js",
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
@@ -34,6 +40,11 @@
   "keywords": [
     "hey"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "author": "mustafa",
   "license": "ISC",
   "bugs": {
