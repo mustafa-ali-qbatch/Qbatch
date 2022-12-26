@@ -1,2 +1,2 @@
-const abcde = 0;
-console.log('hello 1', abcde);
+const test = 0;
+console.log("hello 1", test);
