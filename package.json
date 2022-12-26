@@ -20,6 +20,8 @@
     "test": "mocha",
     "lint": "eslint */*.js",
     "lint-fix": "eslint --fix  */*.js",
+    "pretty": "prettier --write .",
+    "pretty:ci": "prettier --check .",
     "validate": "npm-run-all --parallel test lint",
     "precommit": "npm run lint-fix",
     "prepush": "npm run lint",
