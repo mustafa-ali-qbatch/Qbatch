@@ -15,7 +15,16 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0"
   },
-  
+  "scripts": {
+    "lint": "eslint */*.js",
+    "lint-fix": "eslint --fix  */*.js",
+    "pretty": "prettier --write .",
+    "pretty:ci": "prettier --check .",
+    "validate": "npm-run-all --parallel test lint",
+    "precommit": "npm run lint-fix",
+    "prepush": "npm run lint",
+    "prepare": "husky install"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mustafa-ali-qbatch/Qbatch.git"
