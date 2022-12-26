@@ -5,8 +5,7 @@
   "main": "index.js",
   "lint-staged": {
     "*.js": [
-      "eslint",
-      "prettier --write"
+      "eslint"
     ]
   },
   "devDependencies": {
