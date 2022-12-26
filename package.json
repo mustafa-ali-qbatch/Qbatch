@@ -11,11 +11,14 @@
   },
   "devDependencies": {
     "eslint": "^8.30.0",
-    "eslint-plugin-import": "^2.26.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0"
   },
-  
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mustafa-ali-qbatch/Qbatch.git"
@@ -23,11 +26,6 @@
   "keywords": [
     "hey"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "author": "mustafa",
   "license": "ISC",
   "bugs": {
