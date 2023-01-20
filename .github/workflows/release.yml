@@ -1,23 +1,20 @@
-name: Lint
-
-on: push
-
+name: Release
+on:
+  push:
+    branches:
+      - "main"
 jobs:
-  lint:
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v1
+      - name: executing remote ssh commands
+        uses: appleboy/ssh-action@master
         with:
-          node-version: 12
-          cache: npm
-      - name: Install Node.js dependencies
-        run: npm install
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          # Enable linters
-          eslint: true
+          host: 46.101.148.197
+          username: root
+          key: ${{ secrets.REMOTE_SECRET }}
+          script: |
+            set -e
+            echo 'Hello World'
+            echo "Node version is $(node -v)"
