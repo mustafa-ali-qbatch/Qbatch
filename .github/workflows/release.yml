@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          nvm use || nvm install 16.18
           cache: "npm"
       - run: npm ci
       - run: npm test
@@ -23,5 +22,6 @@ jobs:
           script: |
             set -e
             echo 'Hello World'
+            nvm use || nvm install 16.18
             echo "Node version is $(node -v)"
             echo "Npm version is $(npm -v)"
