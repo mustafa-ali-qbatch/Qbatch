@@ -22,6 +22,8 @@ jobs:
           script: |
             set -e
             echo 'Hello World'
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+            source ~/.bashrc
             nvm use || nvm install 16.18
             echo "Node version is $(node -v)"
             echo "Npm version is $(npm -v)"
