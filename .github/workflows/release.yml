@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: appleboy/ssh-action@master
         with:
+          host: 46.101.148.197
+          username: root
+          key: ${{ secrets.REMOTE_SECRET }}
           script: |
             set -e
             echo 'Hello World'
@@ -19,11 +22,9 @@ jobs:
             nvm use || nvm install 16.18
             echo "Node version is $(node -v)"
             echo "Npm version is $(npm -v)"
+      - uses: actions/setup-node@v3
+        with:
           cache: "npm"
       - run: npm ci
       - run: npm test
-      - uses: appleboy/ssh-action@master
-        with:
-          host: 46.101.148.197
-          username: root
-          key: ${{ secrets.REMOTE_SECRET }}
+      
