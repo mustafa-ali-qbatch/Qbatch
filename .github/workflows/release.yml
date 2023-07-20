@@ -2,19 +2,13 @@ name: Release
 on:
   push:
     branches:
-      - "main"
+      - "test/workflow"
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: "npm"
-      - run: npm ci
-      - run: npm test
       - uses: appleboy/ssh-action@master
         with:
           host: 46.101.148.197
@@ -23,4 +17,14 @@ jobs:
           script: |
             set -e
             echo 'Hello World'
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            nvm use || nvm install 16.18
             echo "Node version is $(node -v)"
+            echo "Npm version is $(npm -v)"
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+      - run: npm ci
+      - run: npm test
+      
